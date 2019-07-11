@@ -38,7 +38,7 @@ class ContactController extends Controller
     {
         //dd($request->all());
         $msag = new ContactPage($request->nom, $request->email, $request->phone, $request->msg);
-        Mail::to('lucsoeyido@gmail.com')->send($msag);
+        Mail::to('lucsoeyido@gmail.com')->queue($msag);
 
     }
 
